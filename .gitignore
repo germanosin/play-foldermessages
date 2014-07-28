@@ -1,0 +1,7 @@
+target/
+.idea/
+.idea_modules/
+.settings/
+*.iml
+user.sbt
+.DS_Store
