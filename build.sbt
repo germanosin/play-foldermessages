@@ -11,7 +11,7 @@ lazy val foldermessages = project.settings(commonSettings: _*)
   .settings(
     name := "play-foldermessages",
     crossScalaVersions := Seq("2.10.4", "2.11.1"),
-    libraryDependencies += "com.typesafe.play" %% "play" % "2.3.2",
+    libraryDependencies += "com.typesafe.play" %% "play" % "2.3.0",
     resolvers += "Typesafe Releases" at "http://repo.typesafe.com/typesafe/releases/",
     publishMavenStyle := true,
     publishTo := {
