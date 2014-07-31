@@ -1,4 +1,4 @@
-package com.germanosin.play.i18n
+package com.github.germanosin.play.i18n
 
 import play.api.Application
 import play.api.i18n.Lang
@@ -6,7 +6,7 @@ import play.api.i18n.{MessagesPlugin, MessagesApi, Messages}
 import play.api.i18n.Messages.UrlMessageSource
 import play.utils.Resources
 import java.net.URL
-import com.germanosin.play.utils.DirIO
+import com.github.germanosin.play.utils.DirIO
 
 
 /**

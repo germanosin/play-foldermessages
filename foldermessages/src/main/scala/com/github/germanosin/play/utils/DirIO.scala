@@ -1,4 +1,4 @@
-package com.germanosin.play.utils
+package com.github.germanosin.play.utils
 
 import play.api.Application
 import java.net.{JarURLConnection, URL}
