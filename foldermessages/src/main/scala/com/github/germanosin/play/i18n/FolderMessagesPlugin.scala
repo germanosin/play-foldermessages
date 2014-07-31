@@ -61,7 +61,7 @@ class FolderMessagesPlugin(app: Application) extends MessagesPlugin {
     Lang.availables(app).map(_.code).map {
       lang => (lang,loadFilesForLang(lang))
     }.toMap
-      .+("default" -> loadMessages("messages"))
+      .+("default" -> loadFilesForLang("default"))
       .+("default.play" -> loadMessages("messages.default"))
   }
 

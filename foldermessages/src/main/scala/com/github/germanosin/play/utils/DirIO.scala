@@ -33,7 +33,7 @@ object DirIO {
     }
 
     jarFile.entries().asScala.filter( e => e.getName.startsWith(rootEntryPath)).map {
-      entry =>  (app.classloader.getResource(entry.getName), entry.getName.replace(rootEntryPath, ""))
+      entry =>  (app.classloader.getResource(entry.getName), entry.getName.replace(rootEntryPath+"/", ""))
     }.toIterator
   }
 }
