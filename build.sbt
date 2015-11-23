@@ -2,16 +2,16 @@ parallelExecution in Global := false
 
 val commonSettings = Seq(
   organization := "com.github.germanosin",
-  version := "1.0",
+  version := "1.0.2",
   javacOptions in Compile ++= Seq("-source", "1.6", "-target", "1.6"),
-  scalaVersion := "2.11.1"
+  scalaVersion := "2.10.4"
 )
 
 lazy val foldermessages = project.settings(commonSettings: _*)
   .settings(
     name := "play-foldermessages",
     crossScalaVersions := Seq("2.10.4", "2.11.1"),
-    libraryDependencies += "com.typesafe.play" %% "play" % "2.3.2",
+    libraryDependencies += "com.typesafe.play" %% "play" % "2.3.3",
     resolvers += "Typesafe Releases" at "http://repo.typesafe.com/typesafe/releases/",
     publishMavenStyle := true,
     publishTo := {
@@ -48,4 +48,4 @@ lazy val sampleApp = Project("sample-app", file("sample-app"))
 
 lazy val playFolderMessages = project.in(file("."))
   .settings(commonSettings: _*)
-  .aggregate(foldermessages,sampleApp)  
+  .aggregate(foldermessages)  

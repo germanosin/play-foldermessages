@@ -32,8 +32,11 @@ object DirIO {
       case _ => ""
     }
 
-    jarFile.entries().asScala.filter( e => e.getName.startsWith(rootEntryPath)).map {
-      entry =>  (app.classloader.getResource(entry.getName), entry.getName.replace(rootEntryPath+"/", ""))
+    jarFile.entries().asScala.filter( e => e.getName.startsWith(rootEntryPath)).filter(!_.isDirectory).map {
+      entry =>  {
+        System.out.println(entry.toString)
+        (app.classloader.getResource(entry.getName), entry.getName.replace(rootEntryPath+"/", ""))
+       } 
     }.toIterator
   }
 }
